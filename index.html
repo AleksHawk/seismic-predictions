@@ -65,7 +65,8 @@
       disableOtherCards(card);
       overlay.onclick = () => { box.classList.remove('show'); overlay.classList.remove('show'); };
     }
-    function downloadImage() {
+    97
+      () {
       const canvas = document.getElementById('shareCanvas');
       const ctx = canvas.getContext('2d');
       const text = document.getElementById('fortune-text').textContent;
@@ -76,7 +77,7 @@
       ctx.textAlign = 'center';
       ctx.fillText('Seismic Fortune Cards', canvas.width / 2, 80);
       ctx.fillStyle = '#000';
-      ctx.font = '28px Inter';
+      ctx.font = 'bold 44px Inter';
       const maxWidth = canvas.width - 80;
       const lines = [];
       let currentLine = '';
@@ -91,12 +92,12 @@
       if (currentLine) lines.push(currentLine);
       let y = 180;
       lines.forEach(line => { ctx.fillText(line, canvas.width / 2, y); y += 40; });
-      ctx.fillStyle = 'rgba(255, 122, 167, 0.3)';
+      ctx.fillStyle = '#fff';
       ctx.font = '14px Inter';
       ctx.textAlign = 'left';
-      ctx.fillText('By @SeismicSys', 20, canvas.height - 20);
+      ctx.fillText('For @SeismicSys', 20, canvas.height - 20);
       ctx.textAlign = 'right';
-      ctx.fillText('Builder @AleksYastreb', canvas.width - 20, canvas.height - 20);
+      ctx.fillText('Creator @AleksYastreb', canvas.width - 20, canvas.height - 20);
       const link = document.createElement('a');
       link.download = 'seismic-fortune.png';
       link.href = canvas.toDataURL();
